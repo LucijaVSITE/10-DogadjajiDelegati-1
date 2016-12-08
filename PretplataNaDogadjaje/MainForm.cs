@@ -16,12 +16,27 @@ namespace Vsite.CSharp
             InitializeComponent();
         }
 
-        // TODO: Dodati metodu za obradu događaja (event handler) koji će onemogućiti tipku buttonDelete ako nema upisanog teksta u kontroli textBox, odnosno omogućiti kada je neki tekst upisan.
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            buttonDelete.Enabled = textBox.Text.Length > 0;
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            textBox.Clear();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        // Dodati metodu za obradu događaja (event handler) koji će onemogućiti tipku buttonDelete ako nema upisanog teksta u kontroli textBox, odnosno omogućiti kada je neki tekst upisan.
 
 
-        // TODO: Dodati metodu za obradu događaja koji će na pritisak tipke buttonDelete obrisati sadržaj kontrole textBox.
- 
+        // Dodati metodu za obradu događaja koji će na pritisak tipke buttonDelete obrisati sadržaj kontrole textBox.
 
-        // TODO: Dodati metodu za obradu događaja koji će na pritisak tipke buttonClose zatvoriti formu.
+
+        // Dodati metodu za obradu događaja koji će na pritisak tipke buttonClose zatvoriti formu.
     }
 }
