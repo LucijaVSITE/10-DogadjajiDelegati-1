@@ -15,7 +15,7 @@ namespace Vsite.CSharp
         {
             InitializeComponent();
 
-            // TODO: Pridružiti donja dva rukovatelja događajima Click tipki button i buttonMy
+            // Pridružiti donja dva rukovatelja događajima Click tipki button i buttonMy
 
             // TODO: Napraviti klasu MyButton koja će biti izvedena iz klase Button, u njoj pregaziti virtualnu metodu OnClick te unutar metode dodati prikaz kontrole MessageBox
             
