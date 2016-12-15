@@ -13,21 +13,27 @@ namespace Vsite.CSharp
         const int max = 1000;
         const string format = "{0, 7} ";
 
-        static void NitnaMetoda()
-        {
-            Console.WriteLine("Krenula je nova nit...");
-            for (int i = 0; i < max; ++i)
-            {
-                Console.Write(format, i);
-            }
-        }
+        //static void NitnaMetoda()
+        //{
+        //    Console.WriteLine("Krenula je nova nit...");
+        //    for (int i = 0; i < max; ++i)
+        //    {
+        //        Console.Write(format, i);
+        //    }
+        //}
 
         static void Main(string[] args)
         {
-            Thread nit = new Thread(NitnaMetoda);
+            //Thread nit = new Thread(NitnaMetoda);
 
-            // TODO: Umjesto gornje naredbe u kojoj se prosljeđuje NitnaMetoda, novoj niti proslijediti anonimnu metodu definiranu pomoću delegata
-
+            // Umjesto gornje naredbe u kojoj se prosljeđuje NitnaMetoda, novoj niti proslijediti anonimnu metodu definiranu pomoću delegata
+            Thread nit = new Thread(()=>{
+                Console.WriteLine("Krenula je nova nit...");
+                for (int i = 0; i < max; ++i)
+                {
+                    Console.Write(format, i);
+                }
+            });
 
             nit.Start();
 
